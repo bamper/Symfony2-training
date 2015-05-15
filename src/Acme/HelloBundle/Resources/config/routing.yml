@@ -1,4 +1,4 @@
 # src/Acme/HelloBundle/Resources/config/routing.yml
 hello:
-    path:  /hello/{first_name}/{last_name}
+    path:  /hello/{name}
     defaults: { _controller: AcmeHelloBundle:Hello:index, color: green }
