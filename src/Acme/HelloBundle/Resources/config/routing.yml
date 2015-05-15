@@ -1,4 +1,19 @@
 # src/Acme/HelloBundle/Resources/config/routing.yml
+welcome:
+    path:   /
+    defaults: { _controller: AcmeHelloBundle:Hello:index, name: Guest }
+
 hello:
     path:  /hello/{name}
     defaults: { _controller: AcmeHelloBundle:Hello:index, color: green }
+
+blog:
+    path:  /blog/{page}
+    defaults: { _controller: AcmeHelloBundle:Blog:index, page: 1 }
+    requirements:
+        page:   \d+
+
+blog_show:
+     path:   /blog/{slug}
+     defaults:  { _controller: AcmeHelloBundle:Blog:show }
+

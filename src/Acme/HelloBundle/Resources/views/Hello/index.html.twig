@@ -1,5 +1,7 @@
-{% extends '::base.html.twig' %}
+{% extends '::hello_base.html.twig' %}
 
 {% block body %}
-    <h1>Cześć {{ name }}</h1>
+    <h1>Wpis {{ name }}</h1>
+    <div class="content">treść artykułu</div>
+    <a href="{{ path('welcome') }}">Home</a>
 {% endblock %}

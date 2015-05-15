@@ -5,16 +5,24 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
-class HelloController extends Controller
+class BlogController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction($page)
+    {
+
+        $content = "Page: $page";
+
+        return new Response($content);
+
+    }
+
+    public function showAction($slug)
     {
         $content = $this->renderView(
             'AcmeHelloBundle:Hello:index.html.twig',
-            array('name' => $name)
+            array('name' => $slug)
         );
 
         return new Response($content);
     }
-
 }
