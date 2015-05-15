@@ -1,0 +1,15 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $('input:checked').on("click", function(){
+            $(this).parent().hide();
+        });
+    </script>
+</head>
+<body>
+<label><input type="checkbox" class="checkbox" value="false" onclick="if($(this).prop('checked')){ $(this).parent().hide(); };">
+    <a href="https://trunk.pa.netart.pl/PA_EmailServer_UsuniecieUslugi.html?clientID=734394&emailServerId=3717337
+" target="_blank" onclick="$(this).parent().find('input').click();if($(this).parent().find('input').prop('checked')){ $(this).parent().hide(); };return false;">link</a></label>
+</body>
+</html>
